@@ -8,7 +8,7 @@ node{
   }
   stage('Compile-Package'){
     def mvnHome = tool name: 'MVN3.3', type: 'maven'
-    sh "${mvnHome}/bin/mvn packages"
+    sh "${mvnHome}/bin/mvn package"
   }
   stage('Slack-Notification'){
     slackSend channel: '#jenkins-learning', color: 'good', iconEmoji: '', message: 'Welcome to Jenkins Slack!', tokenCredentialId: 'slack-key', username: 'jenkins'
