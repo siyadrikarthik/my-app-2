@@ -7,6 +7,6 @@ node{
     sh "${mvnHome}/bin/mvn package"
   }
   stage('Slack-Notification'){
-    slackSend channel: '#jenkins-learning', color: 'good', iconEmoji: '', message: 'Welcome to #jenkins-learning Slack!', teamDomain: 'DevOps', tokenCredentialId: 'slack-jenkins', username: 'jenkins-bot'
+    slackSend channel: 'jenkins-learning', color: 'good', iconEmoji: '', message: 'Welcome to jenkins slack!', teamDomain: 'DevOps', tokenCredentialId: 'slack-jenkins', username: 'jenkins-bot'
   }
 }
