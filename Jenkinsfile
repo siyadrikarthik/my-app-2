@@ -1,7 +1,7 @@
 node{
   try{
       stage('Email-Notification'){
-    emailext body: 'Jenkins Build Started', subject: 'Jenkins - jenkinsfile-git-and-maven', to: 'sandsiyatest@gmail.com'
+    mail bcc: '', body: 'Build Started!', cc: '', from: '', replyTo: '', subject: 'Jenkinsfile Job - Build Started!', to: 'sandsiyatest@gmail.com'
   }
   stage('SCM Checkout'){
     git 'https://github.com/sandeepsiyadri/my-app-2'
