@@ -14,4 +14,7 @@ node{
     Thanks,
     Jenkins Support Team''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job Notification - jenkinsfile-git-and-maven job ', to: 'sandsiyatest@gmail.com'
   }
+  stage('Slack-Notification'){
+    slackSend channel: '#jenkins-learning', color: 'good', iconEmoji: '', message: 'Welcome to #jenkins-learning Slack!', teamDomain: 'DevOps', tokenCredentialId: 'slack-jenkins', username: 'jenkins-bot'
+  }
 }
